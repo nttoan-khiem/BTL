@@ -1,0 +1,15 @@
+clearvars;
+clc
+syms t I J
+x0 = input('Nhap x0: ');
+x = x0*cos(5*t);
+y0 = input('Nhap y0: ');
+phi = input('Nhap phi: ');
+y = y0*cos(5*t+phi);
+disp('Phuong trinh ma ban da nhap la: ');
+fprintf('%si + %sj\n',x,y)
+k = finverse(x);
+syms x
+subs(k,x)
+subs(y,x)
+disp('Phuong trinh chuyen dong la ')
